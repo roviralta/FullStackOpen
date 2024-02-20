@@ -5,25 +5,31 @@ const Header = (props) => {
         </div>
     );
 };
+
 const Content = (props) => {
     return (
         <div>
-            <p>
-                {props.parts[0]} {props.exercicies[0]}
-            </p>
-            <p>
-                {props.parts[1]} {props.exercicies[1]}
-            </p>
-            <p>
-                {props.parts[2]} {props.exercicies[2]}
-            </p>
+            <Part part={props.parts[0]} number={props.exercicies[0]}></Part>
+            <Part part={props.parts[1]} number={props.exercicies[1]}></Part>
+            <Part part={props.parts[2]} number={props.exercicies[2]}></Part>
         </div>
     );
 };
+
 const Total = (props) => {
     return (
         <div>
             <p>{props.total}</p>
+        </div>
+    );
+};
+
+const Part = (props) => {
+    return (
+        <div>
+            <p>
+                {props.part} {props.number}
+            </p>
         </div>
     );
 };
